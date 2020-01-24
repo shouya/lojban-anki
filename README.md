@@ -10,8 +10,8 @@ The way it works is to integrate various resources (`Parser.*`) to build a
 database indexed by gismu words (`Database`). The next thing is to generate anki
 deck using these words. Each card is generated through a template
 (`Anki.Template`) which contains EEx templates for the front and the back of the
-card. The generated file will be stored in a ".tsv" file, which can be then
-imported via an Anki client.
+card. The generated content will be stored in a ".tsv" file, which can be then
+imported via Anki desktop client.
 
 ## Installation and Usage
 
