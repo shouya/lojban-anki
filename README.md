@@ -21,6 +21,12 @@ You need to have Elixir installed, then run the following command under the proj
 
 `:with_etymology` is a predefined tempalate. If you want to customize the front and back of the cards, you can write your own preset like `lib/gismu.ex:5`.
 
+## Resource
+
+* Word list: https://guskant.github.io/lojbo/gismu-cmavo/eng-gimste.html
+* Etymology: http://www.lojban.org/publications/etymology/lojban.icg
+* Sutysisku: https://la-lojban.github.io/sutysisku/en/
+
 ## Copyright
 
 Copyright 2020 Shou Ya
