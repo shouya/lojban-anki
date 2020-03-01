@@ -1,13 +1,15 @@
 defmodule Gismu.Anki do
-  alias Gismu.Anki.Template
+  def generate_deck(%{index: index} = db, template) do
+    # header = template.generate_header()
 
-  def generate_deck(db, template, sep \\ "\t") do
-    for {word, prop} <- db do
-      case Template.generate(template, Map.merge(prop, %{word: word})) do
-        [{front, back}] -> [[front, sep, back], "\n"]
-        [] -> []
-      end
-    end
-    |> :erlang.iolist_to_binary()
+    rest =
+      index
+      |> Enum.map(fn word ->
+        detail = db.detail[word]
+        template.generate_line(word, detail, db)
+      end)
+      |> Enum.reject(&is_nil/1)
+
+    Enum.join(rest, "\n")
   end
 end
