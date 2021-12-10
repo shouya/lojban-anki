@@ -67,7 +67,7 @@ async function parse_lujvo(lujvo) {
     }
 
     const lujvo_glosa = lujvo_definition.glosa;
-    const lujvo_smuni = lujvo_definition.smuni;
+    const lujvo_smuni = `[latex]${lujvo_definition.smuni}[/latex]`;
 
     return {
         lujvo: lujvo,
